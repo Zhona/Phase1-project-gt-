@@ -20,6 +20,8 @@ fetch('https://api.themoviedb.org/3/movie/top_rated?api_key=cbb53a38daad4a38723d
 //     }
 
 // });
+
+//hrllo
 //makes the movie images load 
 function renderMovies(movie) {
     let panel = document.querySelector(".genreButton")
