@@ -10,6 +10,8 @@ fetch('https://api.themoviedb.org/3/movie/top_rated?api_key=cbb53a38daad4a38723d
 
 });
 
+//Hello
+
 // second page of json data 
 // fetch('https://api.themoviedb.org/3/movie/now_playing?api_key=cbb53a38daad4a38723daab094adb724c ')
 // .then ((res) => res.json())
