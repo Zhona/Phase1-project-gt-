@@ -11,17 +11,17 @@ fetch('https://api.themoviedb.org/3/movie/top_rated?api_key=cbb53a38daad4a38723d
 });
 
 // second page of json data 
-// fetch('https://api.themoviedb.org/3/movie/now_playing?api_key=cbb53a38daad4a38723daab094adb724c ')
-// .then ((res) => res.json())
-// .then((movie) =>  {
-//     console.log(movie.results, "fetched form database");
-//     for(let i = 0; i < movie.results.length; i++){
-//         renderMovies(movie.results[i]);
-//     }
+fetch('https://api.themoviedb.org/3/movie/now_playing?api_key=cbb53a38daad4a38723daab094adb724')
+.then ((res) => res.json())
+.then((movie) =>  {
+    console.log(movie.results, "fetched form database");
+    for(let i = 0; i < movie.results.length; i++){
+        renderMovies(movie.results[i]);
+    }
 
-// });
+});
 
-//hrllo
+//this is the message I added
 //makes the movie images load 
 function renderMovies(movie) {
     let panel = document.querySelector(".genreButton")

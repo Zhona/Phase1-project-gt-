@@ -31,6 +31,13 @@ img:hover {
 	filter: drop-shadow(0 0 0 0.75rem white);
 }
 
+#btn {
+	position: fixed;
+	top: 0;
+	right: 0;
+	margin-top: 10px;
+	margin-right: 10px;
+}
 /* span {
 	box-shadow:inset 0px 0px 14px -3px #f2fadc;
 	background:linear-gradient(to bottom, #dbe6c4 5%, #9ba892 100%);
