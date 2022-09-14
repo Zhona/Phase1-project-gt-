@@ -1,26 +1,35 @@
-
 body {
+<<<<<<< HEAD
     background-color: pink;
+=======
+    background-color: #EEEEEE;
+>>>>>>> 90d77abd71c56964a466351e37004228cecb795e
     text-align: center;
-	color: aliceblue;
+	color: #222831;
+	font-family: 'Josefin Sans', sans-serif;
 }
-
-#container nav {
-	overflow-y: auto;
-	display: flex;
-	/* float: left; */
-	position:fixed;
-	bottom: 0;
-	width: 100%;
+#container {
+	position: relative;
 }
-
 img {
 	width: 130px;
 	height: auto;
 	margin: 8px 15px 8px 10px;
 	border-radius: 5%;
 }
-
+#posterImage img {
+	width: 285px;
+}
+#posterImage{
+	position: absolute;
+	right: 200px;
+}
+#movieInfo {
+	position: absolute;
+	left: 200px;
+	width: 450px;
+	line-height: 2;
+}
 img:hover {
 	box-shadow: 1px 1px 15px 2px rgba(255,255,255,0.79);
 	-webkit-box-shadow: 1px 1px 15px 2px rgba(255,255,255,0.79);
@@ -30,7 +39,11 @@ img:hover {
 .genreButton img:hover {
 	filter: drop-shadow(0 0 0 0.75rem white);
 }
+.genreButton img {
+	filter: grayscale(100%);
+}
 
+<<<<<<< HEAD
 
 
 
@@ -106,4 +119,17 @@ span:active {
 /* h1 {
     text-align: center;
 } */
+=======
+#container nav {
+	overflow-y: auto;
+	display: flex;
+	position:fixed;
+	bottom: 20px;
+	width: 100%;
+}
+>>>>>>> 90d77abd71c56964a466351e37004228cecb795e
 
+#footerDiv {
+	position: fixed;
+	bottom: 0;
+}
