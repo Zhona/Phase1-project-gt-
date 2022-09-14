@@ -39,10 +39,10 @@ image.addEventListener("click", () => {
     renderDetails(movie)
 })
 image.addEventListener("mouseover" , () => {
-    image.style.filter = "grayscale(100%)"
+    image.style.filter = "grayscale(0%)"
 })
 image.addEventListener("mouseout" , () => {
-    image.style.filter = "grayscale(0%)"
+    image.style.filter = "grayscale(100%)"
 })
 
 }
