@@ -8,13 +8,14 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;300&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="favicon.svg">
     <script defer src="index.js"></script>
     <title>My movie list</title>
 </head>
 <body>
 <div id="container">
     <h1>Popular Movies</h1>
-    <button id = "toggleMovies"> Top Rated Movies</button>
+    <button onclick="clickFunction()" id = "toggleMovies">Now playing</button>
     <div>
     <!-- Toggle dark mode/ light mode -->
 <div>
@@ -26,7 +27,12 @@
     </label>
 </div>
     
-    <nav class="genreButton"> 
+    <nav id="popularMovies"> 
+
+    </nav>
+
+    <nav id="nowPlaying"> 
+        
     </nav>
     
     <div id = "posterImage">

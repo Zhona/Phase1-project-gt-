@@ -13,8 +13,6 @@ fetch('https://api.themoviedb.org/3/movie/top_rated?api_key=cbb53a38daad4a38723d
 
 });
 
-
-
 // second page of json data 
 fetch('https://api.themoviedb.org/3/movie/now_playing?api_key=cbb53a38daad4a38723daab094adb724')
 .then ((res) => res.json())
@@ -24,16 +22,39 @@ fetch('https://api.themoviedb.org/3/movie/now_playing?api_key=cbb53a38daad4a3872
     //const nowPlaying = movie.results 
     //console.log(nowPlaying, "nowPlaying")
     for(let i = 0; i < movie.results.length; i++){
-        renderMovies(movie.results[i]);
+        renderNowPlaying(movie.results[i]);
     }
 });
 
+function clickFunction () {
+    let container = document.querySelector('#container');
+    let button = document.querySelector('#toggleMovies');
+    let h1 = document.querySelector('h1')
+    let navOne = document.querySelector('#popularMovies');
+    let navTwo = document.querySelector('#nowPlaying');
+
+    if(button.innerText === 'Now playing') {
+        
+        h1.innerText = 'Now Playing'
+        navOne.style.display = 'none';
+        navTwo.style.display = 'flex'
+        button.innerText = 'Popular Movies'
+
+    } else if(button.innerText === 'Popular Movies') {
+
+        h1.innerText = 'Popular Movies'
+        navOne.style.display = 'flex';
+        navTwo.style.display = 'none';
+        button.innerText = 'Now Playing'
+
+    }
+    container.append(button, navOne, navTwo);
+}
 
 
-//this is the message I added
-//makes the movie images load 
-function renderMovies(movie) {
-    let panel = document.querySelector(".genreButton")
+////////////////////////  MAKES NOW PLAYING LOAD  ////////////////////////// 
+function renderNowPlaying(movie) {
+    let panel = document.querySelector("#nowPlaying")
     let image = document.createElement("img")
     image.src = `https://image.tmdb.org/t/p/w185/${movie.poster_path}`
     panel.append(image)
@@ -44,7 +65,32 @@ function renderMovies(movie) {
     // titleCards.append(titleCard)
 
 image.addEventListener("click", () => {
-    console.log("clicked movie")
+    
+    renderDetails(movie)
+})
+image.addEventListener("mouseover" , () => {
+    image.style.filter = "grayscale(0%)"
+})
+image.addEventListener("mouseout" , () => {
+    image.style.filter = "grayscale(100%)"
+})
+}
+
+
+
+////////////////////////  MAKES POPULAR MOVIES LOAD  ////////////////////////// 
+function renderMovies(movie) {
+    let panel = document.querySelector("#popularMovies")
+    let image = document.createElement("img")
+    image.src = `https://image.tmdb.org/t/p/w185/${movie.poster_path}`
+    panel.append(image)
+// for the search bar, this displays the images 
+    // let titleCard = document.createElement("li")
+    // titleCard.id = ("movieList")
+    // titleCard.innerText = movie.title
+    // titleCards.append(titleCard)
+
+image.addEventListener("click", () => {
     renderDetails(movie)
 })
 image.addEventListener("mouseover" , () => {
