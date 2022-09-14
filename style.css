@@ -1,9 +1,5 @@
 body {
-<<<<<<< HEAD
-    background-color: pink;
-=======
     background-color: #EEEEEE;
->>>>>>> 90d77abd71c56964a466351e37004228cecb795e
     text-align: center;
 	color: #222831;
 	font-family: 'Josefin Sans', sans-serif;
@@ -43,7 +39,6 @@ img:hover {
 	filter: grayscale(100%);
 }
 
-<<<<<<< HEAD
 
 
 
@@ -119,7 +114,6 @@ span:active {
 /* h1 {
     text-align: center;
 } */
-=======
 #container nav {
 	overflow-y: auto;
 	display: flex;
@@ -127,7 +121,6 @@ span:active {
 	bottom: 20px;
 	width: 100%;
 }
->>>>>>> 90d77abd71c56964a466351e37004228cecb795e
 
 #footerDiv {
 	position: fixed;
