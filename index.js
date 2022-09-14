@@ -44,7 +44,6 @@ image.addEventListener("mouseover" , () => {
 image.addEventListener("mouseout" , () => {
     image.style.filter = "grayscale(100%)"
 })
-
 }
 
 
