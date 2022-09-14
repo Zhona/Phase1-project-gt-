@@ -3,25 +3,32 @@
 fetch('https://api.themoviedb.org/3/movie/top_rated?api_key=cbb53a38daad4a38723daab094adb724')
 .then ((res) => res.json())
 .then((movie) =>  {
-    console.log(movie.results, "fetched form database");
+    console.log(movie.results, "fetched form database, top rated");
+    //added data to variable
+    //const topRated = movie.results
+    //console.log(topRated, "topRated")
     for(let i = 0; i < movie.results.length; i++){
         renderMovies(movie.results[i]);
     }
 
 });
 
-//Hello
+
 
 // second page of json data 
 fetch('https://api.themoviedb.org/3/movie/now_playing?api_key=cbb53a38daad4a38723daab094adb724')
 .then ((res) => res.json())
 .then((movie) =>  {
-    console.log(movie.results, "fetched form database");
+    console.log(movie.results, "fetched form database, now playing");
+    //added data to a variable
+    //const nowPlaying = movie.results 
+    //console.log(nowPlaying, "nowPlaying")
     for(let i = 0; i < movie.results.length; i++){
         renderMovies(movie.results[i]);
     }
-
 });
+
+
 
 //this is the message I added
 //makes the movie images load 
@@ -73,6 +80,8 @@ checkbox.addEventListener("change", () =>{
     //change theme of website
     document.body.classList.toggle("dark")
 })
+
+//make movie toggle
 
 
 
