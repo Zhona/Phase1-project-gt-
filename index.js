@@ -61,6 +61,12 @@ let image = document.querySelector("#movieImage")
 image.src = image.src = `https://image.tmdb.org/t/p/w185/${movie.poster_path}`
 }
 
+//button that toggle night and light mode 
+const checkbox = document.getElementById("checkbox");
+checkbox.addEventListener("change", () =>{
+    //change theme of website
+    document.body.classList.toggle("dark")
+})
 
 
 
