@@ -78,7 +78,7 @@ img:hover {
 }
 
 body.dark {
-	background-color: black;
+	background-color: #222831;
 	color: #EEEEEE;
 }
 body.dark img:hover {
