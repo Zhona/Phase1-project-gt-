@@ -37,12 +37,17 @@ function renderMovies(movie) {
 image.addEventListener("click", () => {
     console.log("clicked movie")
     renderDetails(movie)
-
-image.addEventListener("mouseover", () => {
-
 })
+image.addEventListener("mouseover" , () => {
+    image.style.filter = "grayscale(100%)"
 })
+image.addEventListener("mouseout" , () => {
+    image.style.filter = "grayscale(0%)"
+})
+
 }
+
+
 // display when we click the movie images
 function renderDetails(movie) {
 
